@@ -1,0 +1,6 @@
+@import url(general.css);
+@media (orientation: landscape) {
+  body {
+    background-color: lightcoral;
+  }
+}/*# sourceMappingURL=index-landscape.css.map */
