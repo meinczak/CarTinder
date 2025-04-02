@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+$logoFont: "Winky Sans";
+$mainFont: "Lexend";
+$bigTextShadow: 5px 5px 5px rgba(66, 68, 90, 1);
+$smallTextShadow: 3px 3px 3px rgba(66, 68, 90, 1);
+
+@mixin logoText {
+    font-family: $logoFont;
+    font-weight: 700;  
+    font-style: italic;
+    color: whitesmoke;
+}
+
+@mixin logoBackground {
+    background: rgb(0,51,153);
+    background: linear-gradient(0deg, rgba(0,51,153,1) 0%, rgba(0,119,255,1) 100%);
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

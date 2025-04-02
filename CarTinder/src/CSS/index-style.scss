@@ -1,0 +1,30 @@
+@import "general";
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    @include flexCenter;
+    @include logoBackground;
+}
+
+main {
+    @media (max-width: 600px) {
+        font-size: 40px;
+        text-shadow: $smallTextShadow;
+    }
+    text-shadow: $bigTextShadow;
+    font-size: 100px;
+
+    @include logoText;
+    @include flexCenter;
+}
+
+img {
+    @media (max-width: 600px) {
+        width: 100px;
+        height: 100px;
+    }
+    width: 250px;
+    height: 250px;
+}
