@@ -6,19 +6,19 @@
     <title>AutoSwap</title>
     <style lang="scss">@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  font-family: "Lexend";
+}
 body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(0, 51, 153);
-  background: linear-gradient(0deg, rgb(0, 51, 153) 0%, rgb(0, 119, 255) 100%);
 }
-main {
+.logo {
   text-shadow: 5px 5px 5px rgb(66, 68, 90);
   font-size: 100px;
+  height: 100vh;
+  width: 100vw;
   font-family: "Winky Sans";
   font-weight: 700;
   font-style: italic;
@@ -26,9 +26,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgb(0, 51, 153);
+  background: linear-gradient(0deg, rgb(0, 51, 153) 0%, rgb(0, 119, 255) 100%);
 }
 @media (max-width: 600px) {
-  main {
+  .logo {
     font-size: 40px;
     text-shadow: 3px 3px 3px rgb(66, 68, 90);
   }
@@ -47,10 +49,10 @@ img {
   <script type="module" crossorigin src="/assets/index-Ud0XylUN.js"></script>
 </head>
 <body>
-    <main>
+    <div class="logo">
         <img src="/IMG/temp logo.png" alt="logo">
         AutoSwap
-    </main>
+    </div>
     <div id="content"></div>
 </body>
 </html>
