@@ -1,8 +1,47 @@
 @import "general";
 
-@media (orientation: landscape) {
-    body {
-      background-color: lightcoral;
-    }
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
 }
-  
+aside {
+    width: 15vw;
+    height: 100vh;
+    background-color: red;
+    @include flexCenter;
+}
+
+.asideContent {
+  width: 97.5%;
+  height: 99%;
+  background-color: aqua;
+}
+
+.logoBar {
+  @include flexCenter;
+  @include logoText;
+
+  height: 10vh;
+  width: 100%;
+  text-shadow: $smallTextShadow;
+  font-size: 40px;
+  background-color: coral;
+
+  img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+main {
+  width: 35vw;
+  height: 100vh;
+  background-color: blue;
+}
+
+.sideInfoWrapper {
+  width: 50vw;
+  height: 100vh;
+  background-color: green;
+}

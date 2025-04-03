@@ -6,6 +6,10 @@ $mainFont: "Lexend";
 $bigTextShadow: 5px 5px 5px rgba(66, 68, 90, 1);
 $smallTextShadow: 3px 3px 3px rgba(66, 68, 90, 1);
 
+* {
+    font-family: $mainFont;
+}
+
 @mixin logoText {
     font-family: $logoFont;
     font-weight: 700;  
