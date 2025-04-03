@@ -3,8 +3,6 @@ function loadVersion() {
     let file = isMobile ? "mobile.html" : "desktop.html";
     let content = document.getElementById("content");
 
-    console.log(1)
-
     if (content){
         fetch(file)
         .then(response => response.text())

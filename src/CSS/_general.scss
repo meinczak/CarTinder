@@ -5,9 +5,14 @@ $logoFont: "Winky Sans";
 $mainFont: "Lexend";
 $bigTextShadow: 5px 5px 5px rgba(66, 68, 90, 1);
 $smallTextShadow: 3px 3px 3px rgba(66, 68, 90, 1);
+$desktopBackground: #171717;
+$divider: #4b4b4b;
+$menu: #5b5b5b;
+$mainFontColor: rgb(150, 150, 150);
 
 * {
     font-family: $mainFont;
+    color: $mainFontColor;
 }
 
 @mixin logoText {
