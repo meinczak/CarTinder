@@ -95,5 +95,43 @@ main {
 .sideInfoWrapper {
   width: 50vw;
   height: 100vh;
-  background-color: green;
+  @include flexCenter;
+}
+
+.sideInfo {
+  @extend .asideContent;
+}
+
+.carName {
+  width: 100%;
+  height: 10%;
+  @include flexCenter;
+}
+
+.tldr {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tldrBox {
+  @include flexCenter;
+  flex-direction: column;
+  width: 12%;
+  height: 90%;
+  text-align: center;
+  font-size: 10px;
+  gap: 0;
+
+  img {
+    width: 60%;
+  }
+
+  p {
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+  }
 }
