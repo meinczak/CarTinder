@@ -1,0 +1,1 @@
+const e=document.getElementById("opt1"),n=document.getElementById("opt2"),c=document.getElementById("opt3"),d=[e,n,c];function t(o){o&&(o.style.color="white")}d.forEach(o=>{o==null||o.addEventListener("click",()=>{t(o)}),console.log(o)});t(e);function s(){console.log("You are in desktop mode!")}export{s as default};

@@ -18,14 +18,14 @@ body {
 }
 @keyframes logo-animation {
   from {
-    transform: translateY(0%);
+    opacity: 1;
   }
   to {
-    transform: translateY(-100%);
+    opacity: 0;
   }
 }
 .logo {
-  animation: logo-animation 1s 2s ease-in-out forwards;
+  animation: logo-animation 1s 1s ease-out forwards;
   text-shadow: 5px 5px 5px rgb(66, 68, 90);
   font-size: 100px;
   height: 100vh;
@@ -33,6 +33,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 100;
+  pointer-events: none;
   font-family: "Winky Sans";
   font-weight: 700;
   font-style: italic;
@@ -60,7 +61,7 @@ img {
   }
 }
     </style>
-  <script type="module" crossorigin src="/assets/index-CgDI1qCx.js"></script>
+  <script type="module" crossorigin src="/assets/index-qJ1C-861.js"></script>
 </head>
 <body>
     <div class="logo">
