@@ -10,5 +10,25 @@ function loadVersion() {
     } 
 }
 
+function loadModuleBasedOnOrientation() {
+    if (window.matchMedia("(orientation: landscape)").matches) {
+        import('./desktop')
+            .then((module) => {
+                (module as { default: () => void }).default();
+            })
+            .catch((err) => console.error('Error loading desktop module:', err));
+    } else {
+        import('./mobile')
+            .then((module) => {
+                (module as { default: () => void }).default();
+            })
+            .catch((err) => console.error('Error loading mobile module:', err));
+    }
+}
+
+window.addEventListener('resize', loadModuleBasedOnOrientation);
+loadModuleBasedOnOrientation();
+
+
 loadVersion();
 window.addEventListener("resize", loadVersion);

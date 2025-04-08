@@ -89,7 +89,17 @@ aside {
 main {
   width: 35vw;
   height: 100vh;
-  background-color: blue;
+  @include flexCenter;
+}
+
+#photo {
+  width: 99.5%;
+  height: 99%;
+  background-image: url(/public/IMG/temp\ photo.jpg);
+  border-radius: 1vh;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .sideInfoWrapper {
@@ -100,6 +110,7 @@ main {
 
 .sideInfo {
   @extend .asideContent;
+  width: 99.25%;
 }
 
 .carName {
