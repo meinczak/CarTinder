@@ -1,4 +1,4 @@
-@import "general";
+@import "_general";
 
 .container {
   width: 100vw;
@@ -133,5 +133,31 @@ main {
     color: white;
     font-weight: 600;
     font-size: 12px;
+  }
+}
+
+.selector {
+  height: 5vh;
+  width: 20vw;
+  margin: auto;
+  display: flex;
+  margin-top: 3vh;
+  border: 3px solid $divider;
+  border-radius: 1vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.selectorOption {
+  padding: 5px;
+  height: 100%;
+  color: $mainFontColor;
+  transition: transform 0.2s;
+  user-select: none;
+
+  @include flexCenter;
+
+  &:hover {
+    transform: scale(1.2); 
   }
 }

@@ -9,10 +9,10 @@ body {
 
 @keyframes logo-animation {
     from {
-        transform: translateY(0%); 
+        opacity: 1; 
     }
     to {
-        transform: translateY(-100%);
+        opacity: 0;
         
     }
 }
@@ -23,7 +23,7 @@ body {
         text-shadow: $smallTextShadow;
     }
 
-    animation: logo-animation 1s 2s ease-in-out forwards;
+    animation: logo-animation 1s 1s ease-out forwards;
 
     text-shadow: $bigTextShadow;
     font-size: 100px;
@@ -32,6 +32,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 100;
+    pointer-events: none;
 
     @include logoText;
     @include flexCenter;
