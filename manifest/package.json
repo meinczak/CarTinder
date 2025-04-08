@@ -1,0 +1,19 @@
+{
+  "name": "my-manifest-project",
+  "version": "0.1.0",
+  "description": "A project made with Manifest",
+  "scripts": {
+    "manifest": "node scripts/watch/watch.js",
+    "manifest:seed": "node node_modules/manifest/dist/manifest/src/seed/scripts/seed.js"
+  },
+  "dependencies": {
+    "manifest": "^4.11.3",
+    "nodemon": "^3.1.9",
+    "sqlite3": "^5.1.7"
+  },
+  "trustedDependencies": [
+    "@nestjs/core",
+    "sharp",
+    "sqlite3"
+  ]
+}
