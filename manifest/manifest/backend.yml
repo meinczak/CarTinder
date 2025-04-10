@@ -3,12 +3,17 @@ name: AutoSwap
 entities:
   User:
     properties:
-      - { name: brand, type: text }
-      - { name: model, type: text }
-      - { name: mileage, type: number}
-      - { name: fuelType, type: choice, options: { values: [Benzyna, LPG, Diesel, Elektryczny, Hybryda, Wodór]}}
+      - { name: brand, type: string }
+      - { name: model, type: string }
+      - { name: mileage, type: number }
+      - { name: fuelType, type: choice, options: { values: [Benzyna, LPG, Diesel, Elektryczny, Hybrydowy, Wodór]}}
       - { name: gearbox, type: choice, options: { values: [Manualna, Automatyczna]}}
       - { name: engineCapacity, type: number }
+      - { name: horsePower, type: number }
       - { name: bodyType, type: choice, options: { values: [Małe, Miejskie, Coupe, Kabriolet, Kombi, Kompakt, Minivan, Sedan, SUV, Hatchback, Crossover, Pickup, Inne]}}
-      - { name: driveType, type: choice, options: { values: }}
+      - { name: driveType, type: choice, options: { values: [FWD, RWD, AWD]}}
+      - { name: swapDuration, type: choice, options: { value: [Na Krótko, Raczej Na Krótko, Na Długo, Raczej Na Długo, Na Stałe, Jeszcze Nie Wiem, Obojętnie]}}
+      - { name: ownersLocation, type: string }
+      - { name: bio, type: text }
+      - { name: accidents, type: boolean }
     authenticable: true
