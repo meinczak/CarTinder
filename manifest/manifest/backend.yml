@@ -1,22 +1,14 @@
-name: My pet app 🐾
+name: AutoSwap
+
 entities:
-  Owner:
+  User:
     properties:
-      - name
-      - { name: birthdate, type: date }
-
-  Cat:
-    properties:
-      - name
-      - { name: age, type: number }
-      - { name: birthdate, type: date }
-    belongsTo:
-      - Owner
-
-  Homepage:
-    nameSingular: Home content
-    single: true
-    properties:
-      - title
-      - { name: description, type: richText }
-      - { name: cover, type: image }
+      - { name: brand, type: text }
+      - { name: model, type: text }
+      - { name: mileage, type: number}
+      - { name: fuelType, type: choice, options: { values: [Benzyna, LPG, Diesel, Elektryczny, Hybryda, Wodór]}}
+      - { name: gearbox, type: choice, options: { values: [Manualna, Automatyczna]}}
+      - { name: engineCapacity, type: number }
+      - { name: bodyType, type: choice, options: { values: [Małe, Miejskie, Coupe, Kabriolet, Kombi, Kompakt, Minivan, Sedan, SUV, Hatchback, Crossover, Pickup, Inne]}}
+      - { name: driveType, type: choice, options: { values: }}
+    authenticable: true
