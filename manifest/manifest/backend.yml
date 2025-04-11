@@ -12,8 +12,22 @@ entities:
       - { name: horsePower, type: number }
       - { name: bodyType, type: choice, options: { values: [Małe, Miejskie, Coupe, Kabriolet, Kombi, Kompakt, Minivan, Sedan, SUV, Hatchback, Crossover, Pickup, Inne]}}
       - { name: driveType, type: choice, options: { values: [FWD, RWD, AWD]}}
-      - { name: swapDuration, type: choice, options: { value: [Na Krótko, Raczej Na Krótko, Na Długo, Raczej Na Długo, Na Stałe, Jeszcze Nie Wiem, Obojętnie]}}
+      - { name: swapDuration, type: choice, options: { values: [Na Krótko, Raczej Na Krótko, Na Długo, Raczej Na Długo, Na Stałe, Jeszcze Nie Wiem, Obojętnie]}}
       - { name: ownersLocation, type: string }
       - { name: bio, type: text }
       - { name: accidents, type: boolean }
     authenticable: true
+  Swipes:
+    properties:
+      - { name: action, type: choice, options: { values: [Like, Dislike]}}
+    belongsToMany:
+      - User
+  Matches:
+    belongsToMany:
+      - User
+  Messages:
+    properties:
+      - { name: message, type: text }
+      - { name: sent, type: typestamp}
+    belongsToMany:
+      - User
