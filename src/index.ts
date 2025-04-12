@@ -1,3 +1,9 @@
+import Manifest from '@mnfst/sdk'
+
+const manifest = new Manifest();
+const users = await manifest.from('Users').find();
+console.log(users);
+
 function loadVersion() {
     let isMobile = window.innerWidth <= 768;
     let file = isMobile ? "mobile.html" : "desktop.html";
