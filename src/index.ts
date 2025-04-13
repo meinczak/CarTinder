@@ -1,7 +1,7 @@
 import Manifest from '@mnfst/sdk'
 
 const manifest = new Manifest();
-const users = await manifest.from('Users').find();
+const users = await manifest.from('users').find();
 console.log(users);
 
 function loadVersion() {

@@ -20,3 +20,8 @@ changeOpt(op1);
 export default function() {
     console.log('You are in desktop mode!');
 }
+
+function balls () {
+    console.log("test");
+}
+balls();

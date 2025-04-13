@@ -6,17 +6,23 @@ entities:
       - { name: brand, type: string }
       - { name: model, type: string }
       - { name: mileage, type: number }
-      - { name: fuelType, type: choice, options: { values: [Benzyna, LPG, Diesel, Elektryczny, Hybrydowy, Wodór]}}
+      - { name: fuelType, type: choice, options: { values: [Benzyna, LPG, Diesel, Elektryczny, Hybrydowy, "Wodór"]}}
       - { name: gearbox, type: choice, options: { values: [Manualna, Automatyczna]}}
       - { name: engineCapacity, type: number }
       - { name: horsePower, type: number }
-      - { name: bodyType, type: choice, options: { values: [Małe, Miejskie, Coupe, Kabriolet, Kombi, Kompakt, Minivan, Sedan, SUV, Hatchback, Crossover, Pickup, Inne]}}
+      - { name: bodyType, type: choice, options: { values: ["Małe", Miejskie, Coupe, Kabriolet, Kombi, Kompakt, Minivan, Sedan, SUV, Hatchback, Crossover, Pickup, Inne]}}
       - { name: driveType, type: choice, options: { values: [FWD, RWD, AWD]}}
-      - { name: swapDuration, type: choice, options: { values: [Na Krótko, Raczej Na Krótko, Na Długo, Raczej Na Długo, Na Stałe, Jeszcze Nie Wiem, Obojętnie]}}
+      - { name: swapDuration, type: choice, options: { values: ["Na Krótko", "Raczej Na Krótko", "Na Długo", "Raczej Na Długo", "Na Stałe", "Jeszcze Nie Wiem", "Obojętnie"]}}
       - { name: ownersLocation, type: string }
       - { name: bio, type: text }
       - { name: accidents, type: boolean }
     authenticable: true
+  Images:
+    properties:
+      - { name: photo, type: image }
+      - { name: isProfilePic, type: boolean }
+    belongsTo:
+      - User
   Swipes:
     properties:
       - { name: action, type: choice, options: { values: [Like, Dislike]}}
@@ -27,7 +33,7 @@ entities:
       - User
   Messages:
     properties:
-      - { name: message, type: text }
-      - { name: sent, type: typestamp}
+      - { name: messageText, type: string }
+      - { name: sent, type: timestamp }
     belongsToMany:
       - User
