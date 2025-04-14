@@ -1,19 +1,18 @@
 import Manifest from '@mnfst/sdk'
 
 const manifest = new Manifest();
-const users = await manifest.from('users').find();
-console.log(users);
+const content = document.getElementById("content");
 
 function loadVersion() {
     let isMobile = window.innerWidth <= 768;
     let file = isMobile ? "mobile.html" : "desktop.html";
-    let content = document.getElementById("content");
-
+    
     if (content){
         fetch(file)
         .then(response => response.text())
         .then(html => content.innerHTML = html);
     } 
+    window.addEventListener("resize", loadVersion);
 }
 
 function loadModuleBasedOnOrientation() {
@@ -35,6 +34,13 @@ function loadModuleBasedOnOrientation() {
 window.addEventListener('resize', loadModuleBasedOnOrientation);
 loadModuleBasedOnOrientation();
 
-
-loadVersion();
-window.addEventListener("resize", loadVersion);
+if (localStorage.AutoSwapPassword && localStorage.AutoSwapLogin) {
+    await manifest.login('users', localStorage.AutoSwapLogin, localStorage.AutoSwapPassword);
+    loadVersion();
+} else {
+    if (content){
+        fetch('form.html')
+        .then(response => response.text())
+        .then(html => content.innerHTML = html);
+    } 
+}

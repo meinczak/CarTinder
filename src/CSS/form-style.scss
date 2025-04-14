@@ -1,0 +1,15 @@
+@import "_general";
+
+.formWrapper {
+    @include logoBackground;
+    @include flexCenter;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+form {
+    background-color: white;
+    border: 1px solid $mainFontColor;
+    border-radius: 1vh;
+}
