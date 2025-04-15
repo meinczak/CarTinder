@@ -9,6 +9,10 @@ $desktopBackground: #171717;
 $divider: #4b4b4b;
 $menu: #5b5b5b;
 $mainFontColor: rgb(150, 150, 150);
+$formFontColor: rgb(32, 32, 32);
+$mainColor: rgb(85, 130, 255);
+$mainColorHover: rgb(65, 100, 200);
+$formShadow: 0 0 15px -5px black;
 
 * {
     font-family: $mainFont;
@@ -32,3 +36,4 @@ $mainFontColor: rgb(150, 150, 150);
     align-items: center;
     justify-content: center;
 }
+

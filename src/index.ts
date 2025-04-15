@@ -1,4 +1,4 @@
-import Manifest from '@mnfst/sdk'
+import Manifest from '@mnfst/sdk';
 
 const manifest = new Manifest();
 const content = document.getElementById("content");
@@ -38,7 +38,7 @@ if (localStorage.AutoSwapPassword && localStorage.AutoSwapLogin) {
     await manifest.login('users', localStorage.AutoSwapLogin, localStorage.AutoSwapPassword);
     loadVersion();
 } else {
-    if (content){
+    if (content) {
         fetch('form.html')
         .then(response => response.text())
         .then(html => content.innerHTML = html);

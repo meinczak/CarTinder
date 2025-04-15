@@ -3,8 +3,24 @@
 </style>
 
 <div class="formWrapper">
-    <form>
-        <h1>Sign In</h1>
-        
-    </form>
+    <div id="form">
+        <div class="formTitle">LOGIN</div>
+        <label for="email">Email</label><br>
+        <input type="text" name="email" id="email"><br>
+        <label for="password">Password</label><br>
+        <input type="text" name="password" id="password"><br>
+        <div class="remeberContainer">
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Remember me?</label>
+        </div>
+        <div id="error">
+            Somethings wrong, Try again! <br>
+        </div>
+        <button onclick="userLogin()">LOGIN</button>
+        <div class="registerContainer">
+            Dont have an account? 
+            <div id="register" onclick=""> REGISTER</div>
+        </div>
+    </div>
 </div>
+<script type="module" src="/src/index.ts"></script>
