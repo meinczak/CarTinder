@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+// FONT STUFF
+
+$primaryFont: "Lexend";
+$logoFont: "Winky Sans";
+
+// COLORS STUFF
+
+$primary-50: #e3f2fd;
+$primary-100:#bbdefb;
+$primary-200:#90caf9;
+$primary-300:#64b5f6;
+$primary-400:#42a5f5;
+$primary-500:#2196f3;
+$primary-600:#1e88e5;
+$primary-700:#1976d2;
+$primary-800:#1565c0;
+$primary-900:#0d47a1;
+
+$background-100:#f8f9fa;
+$background-200:#e9ecef;
+$background-300:#dee2e6;
+$background-400:#ced4da;
+$background-500:#adb5bd;
+$background-600:#6c757d;
+$background-700:#495057;
+$background-800:#343a40;
+$background-900:#212529;
+
+// SIZE STUFF
+
+$borderRadius: 0.375rem;
+$containerRadius: 0.75rem;
+
+// MIX-INS
+
+@mixin logoText {
+    font-family: $logoFont;
+    font-weight: 700;  
+    font-style: italic;
+    color: $primary-50;
+    font-size: 1rem;
+    text-shadow: 0 0 0.25rem $primary-800;
+    -webkit-text-stroke: 0.05rem $primary-900;
+}
+
+@mixin logoImg {
+    width: 25px;
+    height: 25px;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

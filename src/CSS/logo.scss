@@ -1,0 +1,25 @@
+@import "variables";
+
+.logoWrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: $primary-700;
+    animation: logoAnim 1s 1s ease-out forwards;
+    position: fixed;
+
+    @include flexCenter;
+}   
+
+.logo {
+    @include logoText;
+    
+    scale: 12.5;
+    @media (max-width: 600px) {
+        scale: 5;
+    }
+}
+
+@keyframes logoAnim {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
