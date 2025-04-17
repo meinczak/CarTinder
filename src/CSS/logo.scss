@@ -1,11 +1,12 @@
 @import "variables";
 
-.logoWrapper {
+#logoWrapper {
     height: 100vh;
     width: 100vw;
     background-color: $primary-700;
     animation: logoAnim 1s 1s ease-out forwards;
     position: fixed;
+    z-index: 100;
 
     @include flexCenter;
 }   

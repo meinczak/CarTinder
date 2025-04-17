@@ -102,6 +102,10 @@ button:hover {
     color: $mainColorHover;
 }
 
+input {
+    border-radius: $borderRadius;
+}
+
 input[type=checkbox] {
     accent-color: $mainColor;
     cursor: pointer;
@@ -114,4 +118,8 @@ input[type=checkbox]:hover {
 
 .noMargin {
     margin-bottom: 10px;
+}
+
+#error {
+    color: red;
 }

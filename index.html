@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoSwap</title>
-    <link rel="icon" type="image/x-icon" href="/public/IMG/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/IMG/favicon.png">
     <style lang="scss">
         @import "./src/CSS/index.scss";
     </style>
 </head>
 <body>
-    <div class="logoWrapper">
+    <div id="logoWrapper">
         <div class="logo">
             AutoSwap
         </div>
@@ -18,32 +18,50 @@
     
     <!-- form -->
     <div id="formWrapper">
-        <div id="form">
+        <div id="loginForm" class="form">
             <div class="formTitle">LOGIN</div>
             <label for="email">Email</label><br>
             <input type="text" name="email" id="email"><br>
             <label for="password">Password</label><br>
-            <input type="text" name="password" id="password"><br>
+            <input type="password" name="password" id="password"><br>
             <div class="remeberContainer">
                 <input type="checkbox" name="remember" id="remember">
                 <label for="remember">Remember me?</label>
-            </div>
-            <div id="error">
+            </div><br>
+            <div id="errorL">
                 Somethings wrong, Try again! <br>
             </div>
-            <button onclick="userLogin()">LOGIN</button>
-            <div class="registerContainer">
+            <button onclick="login()">LOGIN</button>
+            <div class="accountContainer">
                 Dont have an account? 
-                <div id="register" onclick=""> REGISTER</div>
+                <div id="register" onclick="changeForm(true)"> REGISTER</div>
+            </div>
+        </div>
+        <div id="registerForm" class="form">
+            <div class="formTitle">REGISTER</div>
+            <label for="email">Email</label><br>
+            <input type="text" name="email" id="registerEmail"><br>
+            <label for="password">Password</label><br>
+            <input type="password" name="password" id="registerPassword"><br>
+            <label for="repeatPassword">Repeat password</label><br>
+            <input type="password" name="repeatPassword" id="repeatPassword"><br>
+            <div id="errorR">
+                Something's wrong, Try again! <br>
+            </div>
+            <button onclick="register()">REGISTER</button>
+            <div class="accountContainer">
+                Already have an account?
+                <div id="login" onclick="changeForm(false)"> LOGIN</div>
             </div>
         </div>
     </div>
     
     <!-- desktop -->
     
-    <!-- <div id="desktopWrapper">
+    <div id="desktopWrapper">
         desktop
-    </div> -->
+        <button onclick="logout()">log out</button>
+    </div>
     
     <!-- mobile -->
     
