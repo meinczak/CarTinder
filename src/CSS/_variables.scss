@@ -44,6 +44,7 @@ $containerRadius: 0.75rem;
     font-size: 1rem;
     text-shadow: 0 0 0.25rem $primary-800;
     -webkit-text-stroke: 0.05rem $primary-900;
+    user-select: none;
 }
 
 @mixin logoImg {

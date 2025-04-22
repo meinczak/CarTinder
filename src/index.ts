@@ -31,6 +31,8 @@ function changeForm (isLogin: boolean) {
     if (registerEmail) {registerEmail.value = "";}
     if (registerPassword) {registerPassword.value = "";}
     if (repeatPassword) {repeatPassword.value = "";}
+    if (errorL) {errorL.style.display = "none";}
+    if (errorR) {errorR.style.display = "none";}
 
     if (loginForm && registerForm && isLogin) {
         loginForm.style.display = "none";
