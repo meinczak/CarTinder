@@ -13,6 +13,9 @@ const remember = document.getElementById("remember");
 const registerEmail = document.getElementById("registerEmail");
 const registerPassword = document.getElementById("registerPassword");
 const repeatPassword = document.getElementById("repeatPassword");
+const dInfo = document.getElementById("dInfo");
+
+let dInfoShown = false;
 
 setTimeout(function(){
     if (logo) {
@@ -129,7 +132,18 @@ async function register() {
 
 }
 
+async function dShowInfo () {
+    if (dInfo && dInfoShown) {
+        dInfo.style.display = "none";
+        dInfoShown = false;
+    } else if (dInfo) {
+        dInfo.style.display = "flex";
+        dInfoShown = true;
+    }
+}
+
 loginRemember();
+(window as any).dShowInfo = dShowInfo;
 (window as any).changeForm = changeForm;
 (window as any).loginRemember = loginRemember;
 (window as any).loginButton = loginButton;
